@@ -1,0 +1,20 @@
+{
+  "name": "devgram",
+  "version": "1.0.0",
+  "description": "Tinder for devs",
+  "keywords": [
+    "NodeJs",
+    "Javascript",
+    "ExpressJS"
+  ],
+  "license": "ISC",
+  "author": "Deepesh Kumar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
