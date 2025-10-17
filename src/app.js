@@ -2,18 +2,28 @@ const express = require("express");
 
 const app = express();
 
-app.use("/hello", (req, res) => {
-  res.send("Hello from the server server server hlo");
+app.get("/user", (req, res) => {
+  res.send({ firstname: "Deepesh", lastname: "Kumar" });
 });
-app.use("/test", (req, res) => {
-  res.send("Hello from the test server");
+
+app.post("/user", (req, res) => {
+  res.send("Hello from the post server");
 });
-app.use("/secret", (req, res) => {
-  res.send("No secret");
+
+app.patch("/user", (req, res) => {
+  res.send("Hello from the patch server");
 });
+
+app.delete("/user", (req, res) => {
+  console.log("Deleted successfully");
+  res.send("Hello from the delete server");
+});
+
+
 app.use("/", (req, res) => {
-  res.send("Hello from the server");
+  res.send("Welcome to the server");
 });
+
 
 app.listen(7777, () => {
   console.log("Server is listening");
